@@ -14,28 +14,36 @@
 
   .page-header {
     text-align: center;
-    padding: 1rem 0 0.5rem;
+    padding: 0.5rem 0 0 0; /* was: 1rem 0 0.5rem */
+    margin-bottom: 0;
+  }
+
+  .page-header h1,
+  .page-header .vis-name {
+    margin-top: 0;
   }
 
   .signature {
     max-width: 300px;
     height: auto;
     display: block;
-    margin: 0 auto 0.05rem;
+    margin: 1rem auto 0.05rem;
   }
   
   .vis-name {
+    margin: 0;
+    padding: 0;
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 1px;
     color: #333;
-    margin-bottom: 1rem;
   }
 
   /* Container holds sidebar + main content */
   .container {
     display: flex;
     min-height: calc(100vh - 140px); /* subtract header height */
+    margin-top: 2rem;
   }
 
 
@@ -131,26 +139,29 @@
   /* Main content */
   .content {
     flex-grow: 1;
-    padding: 2rem;
+    padding: 0 2rem; /* was: 2rem; removes top padding */
+    
   }
 
   section {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 0;
   }
 
   .image-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 0;
+  
   }
   
   .image-grid img {
     width: 100%;
     height: auto;
   }
-  
+
   footer {
     text-align: center;
     margin-top: 4rem;
