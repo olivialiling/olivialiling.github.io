@@ -164,6 +164,13 @@
     object-fit: contain;
   }
 
+  .homepage-feature {
+    width: 100%;
+    height: auto;         /* let it scale naturally */
+    max-height: none;     /* ensures it’s not limited like the others */
+    display: block;
+  }
+  
   footer {
     text-align: center;
     margin-top: 4rem;
