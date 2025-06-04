@@ -166,8 +166,8 @@
 
   .homepage-feature {
     width: 100%;
-    height: auto;         /* let it scale naturally */
-    max-height: none;     /* ensures it’s not limited like the others */
+    height: calc(100vh - 140px); /* Adjust to subtract header + margins */
+    object-fit: cover;
     display: block;
   }
   
