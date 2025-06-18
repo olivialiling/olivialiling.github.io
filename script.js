@@ -1,5 +1,7 @@
 function toggleSidebar() {
     const sidebar = document.querySelector('.sidebar');
+    const toggleButton = document.getElementById('menuToggle');
+    
     sidebar.classList.toggle('active');
 
     // Swap icon
@@ -8,5 +10,4 @@ function toggleSidebar() {
     } else {
       toggleButton.textContent = '☰';
     }
-  }
   }
