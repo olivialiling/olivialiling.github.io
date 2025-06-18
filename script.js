@@ -1,2 +1,4 @@
-// Placeholder for future interactivity
-console.log("Portfolio loaded.");
+function toggleSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('active');
+  }

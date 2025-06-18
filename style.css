@@ -190,3 +190,36 @@
     font-size: 0.8rem;
     color: #777;
   }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    margin: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+    position: relative;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+      position: absolute;
+      top: 60px; /* below header */
+      left: 0;
+      width: 200px;
+      background: white;
+      padding: 1rem;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+  
+    .sidebar.active {
+      display: block;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  }
+  
