@@ -79,6 +79,14 @@
     color: #04AA6D;
   }
  
+  @media screen and (max-width: 767px) { /* Styles for screens up to 767px wide (common mobile breakpoint) */
+    .navbar {
+      /* Adjust styles for smaller screens, e.g., reduce padding or font size */
+      padding: 5px 0;
+      font-size: 0.9em;
+    }
+    /* Alternatively, you could hide the full nav and show a hamburger icon here */
+  }
 
   .menu-label {
     font-weight: 500;
