@@ -80,7 +80,7 @@
   }
  
   @media screen and (max-width: 767px) { /* Styles for screens up to 767px wide (common mobile breakpoint) */
-    .navbar {
+    .topnav {
       /* Adjust styles for smaller screens, e.g., reduce padding or font size */
       padding: 5px 0;
       font-size: 0.9em;
