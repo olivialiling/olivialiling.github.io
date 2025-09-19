@@ -78,13 +78,15 @@
   ul li a.active {
     color: #04AA6D;
   }
- 
-  @media screen and (max-width: 767px) { /* Styles for screens up to 767px wide (common mobile breakpoint) */
-    .topnav {
-      font-size: 12px;
+
+    /* Responsive tweaks */
+  @media screen and (max-width: 600px) {
+    .topnav a {
+      font-size: 14px;   /* smaller text */
+      padding: 10px 8px; /* tighter padding */
     }
-    /* Alternatively, you could hide the full nav and show a hamburger icon here */
   }
+ 
 
   .menu-label {
     font-weight: 500;
