@@ -66,6 +66,7 @@
   
   ul li {
     float: left;
+    position: relative;
   }
   
   ul li a {
@@ -124,30 +125,29 @@
   /* Main content */
   .content {
     flex-grow: 1;
-    padding: 0 2rem; /* was: 2rem; removes top padding */
+    padding: 0 1rem; /* was: 2rem; removes top padding */
     
   }
 
   section {
-    max-width: 1000px;
+    max-width: none;
     margin: 0 auto 2rem;
     padding: 0;
   }
 
   .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
+    column-count: 3;
+    gap: 15px;
     margin-top: 0;
-  
   }
   
   .image-grid img {
     width: 100%;
     height: auto;
-    max-height: 400px;
-    object-fit: contain;
+    gap: 15px;
+    object-fit: cover;
   }
+ 
 
   .homepage-image-wrapper {
     flex-grow: 1;

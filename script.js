@@ -11,3 +11,20 @@ function toggleSidebar() {
       toggleButton.textContent = '☰';
     }
   }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    var grid = document.querySelector('.image-grid');
+    
+    var msnry = new Masonry(grid, {
+      itemSelector: '.image-grid img',
+      columnWidth: 300,
+      gutter: 15,
+      fitWidth: false,
+      horizontalOrder: true
+    });
+    
+    // Re-layout after images load
+    imagesLoaded(grid, function() {
+      msnry.layout();
+    });
+  });
