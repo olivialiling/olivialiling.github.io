@@ -11,3 +11,4 @@ function toggleSidebar() {
       toggleButton.textContent = '☰';
     }
   }
+

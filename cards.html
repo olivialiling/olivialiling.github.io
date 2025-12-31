@@ -31,17 +31,18 @@
     <main class="content">
         <section>
             <div class="image-grid">
-              <img src="images/lily_card_2025.jpg" alt="">
-              <img src="images/peonies_card_2025.jpg" alt="">
-              <img src="images/peony_card_2025.jpg" alt="">
-              <img src="images/card_flower10_2023.jpeg" alt="">
-              <img src="images/card_flower1_2022.jpg" alt="">
-              <img src="images/card_flower2_2022.jpeg" alt="">
-              <img src="images/card_flower3_2022.jpeg" alt="">
-              <img src="images/card_flower4_2022.jpeg" alt="">
-              <img src="images/card_flower5_2022.jpeg" alt="">
-              <img src="images/card_flower6_2022.jpeg" alt="">
-              <img src="images/card_flower7_2022.jpg" alt="">
+              <div class="grid-item grid-sizer"></div>
+              <figure class="grid-item"><img src="images/lily_card_2025.jpg" alt=""></figure>
+              <figure class="grid-item"><img src="images/peonies_card_2025.jpg" alt=""></figure>
+              <figure class="grid-item"><img src="images/peony_card_2025.jpg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower10_2023.jpeg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower1_2022.jpg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower2_2022.jpeg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower3_2022.jpeg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower4_2022.jpeg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower5_2022.jpeg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower6_2022.jpeg" alt=""></figure>
+              <figure class="grid-item"><img src="images/card_flower7_2022.jpg" alt=""></figure>
               
               
             </div>
@@ -52,6 +53,23 @@
       </footer>
     </main>
   </div>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script>
+    // Initialize Masonry
+    var grid = document.querySelector('.image-grid');
+    var msnry = new Masonry(grid, {
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true,
+      gutter: 8 
+    });
+    
+    // Re-layout after images load
+    imagesLoaded(grid, function() {
+      msnry.layout();
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -28,8 +28,9 @@
     <main class="content">
         <section>
             <div class="image-grid">
-              <img src="images/Title.jpg" alt="">
-              <img src="images/anagramgreen copy.gif" alt="">
+              <div class="grid-item grid-sizer"></div>
+              <figure class="grid-item"><img src="images/Title.jpg" alt=""></figure>
+              <figure class="grid-item"><img src="images/anagramgreen copy.gif" alt=""></figure>
               
             </div>
           </section>
@@ -39,6 +40,23 @@
       </footer>
     </main>
   </div>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+  <script>
+    // Initialize Masonry
+    var grid = document.querySelector('.image-grid');
+    var msnry = new Masonry(grid, {
+      itemSelector: '.grid-item',
+      columnWidth: '.grid-sizer',
+      percentPosition: true,
+      gutter: 8 
+    });
+    
+    // Re-layout after images load
+    imagesLoaded(grid, function() {
+      msnry.layout();
+    });
+  </script>
   <script src="script.js"></script>
 </body>
 </html>

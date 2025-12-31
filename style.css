@@ -124,6 +124,33 @@
 
   /* Main content */
 
+  .t-shirt-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .t-shirt-image-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    
+    
+  }
+
+  
+
+
+  .image-grid {
+    display: grid;
+    /* Creates as many columns as possible, each at least 250px wide, 
+       but growing to fill the space if possible */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 1rem; /* Sets a consistent gap between items */
+  }
+
   section {
     max-width: none;
     margin: 0 auto 2rem;
