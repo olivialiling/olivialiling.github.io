@@ -14,7 +14,7 @@
 
   .page-header {
     text-align: center;
-    padding: 0.5rem 0 0 0; /* was: 1rem 0 0.5rem */
+    padding: 0.5rem 0 0 0; 
     margin-bottom: 0;
   }
 
@@ -123,33 +123,90 @@
   
 
   /* Main content */
-  .content {
-    flex-grow: 1;
-    padding: 0 1rem; /* was: 2rem; removes top padding */
-    
-  }
 
   section {
     max-width: none;
     margin: 0 auto 2rem;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .image-grid {
-    column-count: 3;
-    gap: 15px;
-    margin-top: 100;
-    color:"red";
+    max-width: 100%;
+  }
+
+  /* Grid sizer - used by Masonry to calculate column width */
+  .grid-sizer {
+    width: calc(25% - 6px);
   }
   
-  .image-grid img {
+
+  /* Images inside grid items should be full width */
+  .image-grid .grid-item {
+    width: calc(25% - 6px); /* 4 columns with 8px gap */
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .image-grid .grid-item img {
     width: 100%;
     height: auto;
-    gap: 15px;
-    object-fit: cover;
+    display: block;
   }
- 
 
+  /* 2-column span */
+  .image-grid .grid-item-span2 {
+    width: calc(50% - 4px); /* 2 columns */
+  }
+
+  /* 3-column span */
+  .image-grid .grid-item-span3 {
+    width: calc(75% - 2px); /* 3 columns */
+  }
+  
+  
+  @media screen and (max-width: 1200px) {
+    .grid-sizer,
+    .image-grid .grid-item {
+      width: calc(33.333% - 5.33px); /* 3 columns */
+    }
+    
+    .image-grid .grid-item-span2 {
+      width: calc(66.666% - 2.67px); /* 2 of 3 columns */
+    }
+    
+    .image-grid .grid-item-span3 {
+      width: calc(100%);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .grid-sizer,
+    .image-grid .grid-item {
+      width: calc(50% - 4px); /* 2 columns */
+    }
+    
+    .image-grid .grid-item-span2,
+    .image-grid .grid-item-span3 {
+      width: calc(100%); /* full width on mobile */
+    }
+  }
+
+  /* Mobile screens - 1 column (full width) */
+  @media screen and (max-width: 500px) {
+    section {
+      padding: 0 0.5rem; /* Reduce padding on mobile */
+    }
+    .grid-sizer,
+    .image-grid .grid-item,
+    .image-grid .grid-item-span2,
+    .image-grid .grid-item-span3 {
+      width: 100%; /* Single column, full width */
+      margin-bottom: 8px;
+    }
+  }
+
+
+  
   .homepage-image-wrapper {
     flex-grow: 1;
     display: flex;
@@ -190,5 +247,5 @@
       right: 1rem;
       z-index: 1001; /* higher than sidebar */
     }
-  }
+  
   
