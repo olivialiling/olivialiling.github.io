@@ -178,6 +178,7 @@
     width: 100%;
     height: auto;
     display: block;
+    content-visibility: auto;
   }
 
   /* 2-column span */
