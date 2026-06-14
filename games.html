@@ -3,60 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Games — Olivia Wang</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="page-header">
-    <img src="images/olivia-signature-red.png" alt="signature" class="signature" />
-    <h1 class="vis-name">OLIVIA WANG</h1>
 
+  <header class="page-header">
+    <img src="images/olivia-signature-red.png" alt="Olivia Wang" class="signature" />
+    <p class="vis-name">Olivia Wang</p>
   </header>
 
-  <div class="topnav">
-      <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="cards.html">greeting cards</a></li>
-          <li><a href="games.html" class="active">games</a></li>
-          <li><a href="tshirt.html">graphic tees</a></li>
-          <li><a href="about.html">about</a></li>
-        </ul>
-        
-   </div>
+  <nav class="topnav">
+    <ul>
+      <li><a href="index.html">home</a></li>
+      <li><a href="cards.html">greeting cards</a></li>
+      <li><a href="games.html" class="active">games</a></li>
+      <li><a href="tshirt.html">graphic tees</a></li>
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
 
-    <main class="content">
-        <section>
-            <div class="image-grid">
-              <div class="grid-sizer"></div>
-              <figure class="grid-item"><img src="images/Title.jpg" alt=""></figure>
-              <figure class="grid-item"><img src="images/anagramgreen copy.gif" alt=""></figure>
-              
-            </div>
-          </section>
+  <main>
+    <div class="games-grid">
+      coming soon
+      <img loading="lazy" src="images/Title.jpg" alt="">
+      <img loading="lazy" src="images/anagramgreen copy.gif" alt="">
+    </div>
 
-      <footer>
-        <p>© Olivia Li-Ling Wang 2025</p>
-      </footer>
-    </main>
-  </div>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
-  <script>
-    // Initialize Masonry
-    var grid = document.querySelector('.image-grid');
-    var msnry = new Masonry(grid, {
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true,
-      gutter: 8 
-    });
-    
-    // Re-layout after images load
-    imagesLoaded(grid, function() {
-      msnry.layout();
-    });
-  </script>
-  <script src="script.js"></script>
+    <footer>
+      <p>© Olivia Wang 2025</p>
+    </footer>
+  </main>
+
 </body>
 </html>

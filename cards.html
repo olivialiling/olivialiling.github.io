@@ -3,73 +3,73 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greeting Cards — Olivia Wang</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header class="page-header">
-    <img src="images/olivia-signature-red.png" alt="signature" class="signature" />
-    <h1 class="vis-name">OLIVIA WANG</h1>
 
+  <header class="page-header">
+    <img src="images/olivia-signature-red.png" alt="Olivia Wang" class="signature" />
+    <p class="vis-name">Olivia Wang</p>
   </header>
 
-  <div class="topnav">
-      <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="cards.html" class="active">greeting cards</a></li>
-          <li><a href="games.html">games</a></li>
-          <li><a href="tshirt.html">graphic tees</a></li>
-          <li><a href="about.html">about</a></li>
-        </ul>
-        
-   </div>
+  <nav class="topnav">
+    <ul>
+      <li><a href="index.html">painting</a></li>
+      <li><a href="cards.html" class="active">sketchbook</a></li>
+      <!-- <li><a href="games.html">games</a></li>
+      <li><a href="tshirt.html">graphic tees</a></li> -->
+      <li><a href="about.html">about</a></li>
+    </ul>
+  </nav>
 
- 
+  <main>
+    <div class="masonry-grid">
+      <figure class="grid-item"><img loading="lazy" src="images/but im a cheerleader 2025.jpg" alt=""></figure>
+      <figure class="grid-item"><img loading="lazy" src="images/speedo 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/val and grayson's arms 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/baby asleep and mama 2026.jpg 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/baby sister 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/baby in white arms 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/christopher on pa's shoulders 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/ollie headpat 2026.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/american shorts 2026.jpg" alt=""></figure>
 
 
-    <main class="content">
-        <section>
-            <div class="image-grid">
-              <div class="grid-sizer"></div>
-              <figure class="grid-item"><img src="images/lily_card_2025.jpg" alt=""></figure>
-              <figure class="grid-item"><img src="images/peonies_card_2025.jpg" alt=""></figure>
-              <figure class="grid-item"><img src="images/peony_card_2025.jpg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower10_2023.jpeg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower1_2022.jpg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower2_2022.jpeg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower3_2022.jpeg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower4_2022.jpeg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower5_2022.jpeg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower6_2022.jpeg" alt=""></figure>
-              <figure class="grid-item"><img src="images/card_flower7_2022.jpg" alt=""></figure>
-              
-              
-            </div>
-          </section>
+<!-- 
+      <figure><img loading="lazy" src="images/peonies card 2025.jpg" alt=""></figure>
+      <figure><img loading="lazy" src="images/peonies card 2025.jpg" alt=""></figure>
+      <figure><img loading="lazy" src="images/lily card 2025.jpg" alt=""></figure>
+      <figure><img loading="lazy" src="images/flower card blue.jpg" alt=""></figure>
+      <figure><img loading="lazy" src="images/flower card red.jpg" alt=""></figure>
+      <figure><img loading="lazy" src="images/flower card yellow.jpg" alt=""></figure>
 
-      <footer>
-        <p>© Olivia Li-Ling Wang 2025</p>
-      </footer>
-    </main>
-  </div>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+<figure class="grid-item"><img loading="lazy" src="images/matzoball sandwich 2025.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/katsu chicken 2025.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/cherries 2025.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/lu dan 2025.jpg" alt=""></figure>
+<figure class="grid-item"><img loading="lazy" src="images/matzo ball soup 2025.jpg" alt=""></figure> -->
+      
+    </div>
+
+    <footer>
+      <p>© Olivia Wang 2025</p>
+    </footer>
+  </main>
+
   <script>
-    // Initialize Masonry
-    var grid = document.querySelector('.image-grid');
-    var msnry = new Masonry(grid, {
-      itemSelector: '.grid-item',
-      columnWidth: '.grid-sizer',
-      percentPosition: true,
-      gutter: 8 
-    });
-    
-    // Re-layout after images load
-    imagesLoaded(grid, function() {
-      msnry.layout();
+    document.querySelectorAll('.masonry-grid img').forEach(img => {
+      const show = () => img.style.opacity = '1';
+      if (img.complete && img.naturalWidth > 0) {
+        show();
+      } else {
+        img.addEventListener('load', show);
+        img.addEventListener('error', show);
+      }
     });
   </script>
-  <script src="script.js"></script>
+
+
 </body>
 </html>
