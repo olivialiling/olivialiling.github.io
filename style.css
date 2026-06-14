@@ -77,6 +77,59 @@ main {
   padding: 0 1.5rem;
 }
 
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.lightbox.open {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lightbox-caption {
+  color: #fff;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.lightbox button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.lightbox button:hover {
+  opacity: 1;
+}
+
+
+
 /* ── Image grid — pure CSS columns ── */
 .image-grid {
   display: flex;
@@ -179,7 +232,6 @@ footer {
   width: 100%;
   height: auto;
   display: block;
-  opacity: 0;
   transition: opacity 0.4s ease;
 }
 

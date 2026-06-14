@@ -26,7 +26,7 @@
 
   <main>
     <div class="image-grid">
-      <figure class="grid-item"><img loading="lazy" src="images/waiting on the train 2026.jpg" alt=""></figure>
+      <figure class="grid-item"><img loading="lazy" src="images/waiting on the train 2026.jpg" data-caption="test caption" alt=""></figure>
       <figure class="grid-item"><img loading="lazy" src="images/sitting next to her 2026.jpg" alt=""></figure>
       <figure class="grid-item"><img loading="lazy" src="images/bedsheets 2026.jpg" alt=""></figure>
       <figure class="grid-item"><img loading="lazy" src="images/hands rope 2026.jpg" alt=""></figure>
@@ -53,8 +53,20 @@
     <footer>
       <p>© Olivia Wang 2025</p>
     </footer>
+
+    
   </main>
   
+  <div class="lightbox" id="lightbox">
+    <button id="lightbox-prev">&#8592;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+    <button id="lightbox-next">&#8594;</button>
+  </div>
+
+  <script src="script.js" defer></script>
 
 </body>
 </html>
